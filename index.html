@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lokal Audio Lab adalah studio original sound effects untuk video, film, game, dan konten komersial.">
+<meta name="theme-color" content="#101318">
+<title>Lokal Audio Lab | Sound makes the scene.</title>
+<style>
+:root{--bg:#101318;--white:#f5f2ea;--accent:#bdff68;--line:#333a42;--muted:#a8abb1;--surface:#1a2027}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.wrap{max-width:1160px;padding:0 32px;margin:auto}header{border-bottom:1px solid var(--line);height:82px;display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;letter-spacing:.09em}.symbol{height:36px;width:36px;border:2px solid var(--accent);border-radius:5px;display:flex;align-items:center;justify-content:center;gap:3px}.symbol i{width:3px;height:14px;border-radius:2px;background:var(--accent)}.symbol i:nth-child(2){height:22px}.symbol i:nth-child(4){height:9px}
+nav{display:flex;gap:25px;font-size:14px;color:var(--muted)}nav a:hover{color:var(--accent)}
+.hero{padding:112px 0 110px}.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:56px;align-items:center}
+.eyebrow{font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.19em;text-transform:uppercase}
+h1{font-size:clamp(55px,7vw,96px);letter-spacing:-.075em;line-height:1.03;margin:18px 0 28px}h1 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:18px;line-height:1.75;max-width:620px}.actions{margin-top:33px;display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);border:1px solid var(--accent);color:#101318;padding:15px 21px;font-weight:750;border-radius:3px}
+.btn.secondary{background:transparent;border-color:var(--line);color:var(--white)}
+.visual{height:410px;position:relative;border:1px solid var(--line);background:radial-gradient(circle at 65% 40%,#273824,transparent 52%),var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.visual::after{content:"";position:absolute;inset:24px;border:1px solid #ffffff18;pointer-events:none}
+.visual small{position:absolute;top:38px;left:38px;color:var(--muted);letter-spacing:.12em;font-size:12px}
+.wave{display:flex;align-items:center;gap:5px;max-width:90%;height:140px}.wave i{width:4px;background:var(--accent);height:calc(9px + var(--h)*115px);border-radius:3px}.visual strong{position:absolute;bottom:34px;left:38px;font-size:13px;letter-spacing:.1em}
+section:not(.hero){border-top:1px solid var(--line);padding:82px 0}.section-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}
+h2{font-size:clamp(32px,5vw,57px);line-height:1.12;letter-spacing:-.06em;margin:14px 0 0;max-width:700px}
+.explain{color:var(--muted);max-width:335px;font-size:15px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{padding:27px;border:1px solid var(--line);background:#161b21;border-radius:4px}.card .n{font-size:12px;color:var(--accent)}.card h3{font-size:22px;margin:30px 0 10px}.card p{font-size:14px;color:var(--muted);margin:0}
+.sample{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:23px 0;border-bottom:1px solid var(--line)}.sample:first-child{border-top:1px solid var(--line)}
+.sample h3{margin:0;font-size:20px}.sample p{color:var(--muted);margin:5px 0 0;font-size:14px}
+.controls{display:flex;gap:9px}.small{color:var(--white);border:1px solid var(--line);background:transparent;padding:10px 15px;border-radius:3px}.small.play{border-color:var(--accent);color:var(--accent)}
+.note{color:var(--muted);font-size:13px;margin-top:21px;max-width:720px}
+.end{background:var(--accent);color:#11200c}.end .eyebrow{color:#314024}.end h2{max-width:730px}.end p{max-width:630px;font-size:18px}.end .btn{background:#101318;border-color:#101318;color:var(--white)}
+footer{padding:37px 0;color:var(--muted);font-size:13px}footer .wrap{display:flex;justify-content:space-between;gap:15px}footer b{color:var(--white)}
+@media(max-width:810px){.hero-grid{grid-template-columns:1fr}.visual{height:270px}.grid{grid-template-columns:1fr}nav a:first-child{display:none}.section-top{display:block}.hero{padding:70px 0}section:not(.hero){padding:65px 0}}
+@media(max-width:540px){.wrap{padding:0 19px}header{height:72px}.sample{align-items:flex-start;flex-direction:column}.controls{width:100%}.small{flex:1}footer .wrap{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a href="#" class="logo"><span class="symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>LOKAL AUDIO LAB</a><nav><a href="#approach">Approach</a><a href="#sounds">Sound sampler</a><a href="#about">About</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Original sound effects / Sound design studio</div><h1>Sound makes<br>the scene<span>.</span></h1><p class="lead">Visual membuat kita melihat. Suara membuat kita merasakan. Lokal Audio Lab membangun SFX original untuk editor, filmmaker, kreator konten, dan game developer.</p><div class="actions"><a href="#sounds" class="btn">Dengar sampler gratis</a><a href="#approach" class="btn secondary">Kenapa sound matters?</a></div></div><div class="visual" aria-label="Ilustrasi waveform"><small>FREQUENCY STUDY / 001</small><div class="wave" id="wave" aria-hidden="true"></div><strong>EVERY CUT HAS A SOUND.</strong></div></div></section>
+<section id="approach"><div class="wrap"><div class="section-top"><div><div class="eyebrow">01 / Why sound matters</div><h2>The right sound changes everything.</h2></div><p class="explain">SFX yang baik bukan soal volume atau banyaknya efek. Fungsinya memberi ritme, konteks, dan penekanan visual.</p></div><div class="grid"><article class="card"><span class="n">01 / IMPACT</span><h3>Make the cut land.</h3><p>Efek yang tepat membantu perpindahan visual terasa lebih tegas.</p></article><article class="card"><span class="n">02 / ATMOSPHERE</span><h3>Build the mood.</h3><p>Detail suara membangun antisipasi, ruang, dan emosi adegan.</p></article><article class="card"><span class="n">03 / FEEDBACK</span><h3>Make it respond.</h3><p>Bunyi pendek memberikan umpan balik jelas untuk game dan UI.</p></article></div></div></section>
+<section id="sounds"><div class="wrap"><div class="section-top"><div><div class="eyebrow">02 / Free sound sampler</div><h2>Hear the difference.</h2></div><p class="explain">Dengarkan tiga demo SFX original yang disintesis langsung di browser. Tersedia versi WAV untuk dicoba.</p></div><div id="samples">
+<div class="sample"><div><h3>Cinematic Impact</h3><p>Low-end body, defined attack, controlled tail.</p></div><div class="controls"><button class="small play" data-kind="impact" data-act="play">▶ Dengar</button><button class="small" data-kind="impact" data-act="save">↓ WAV</button></div></div>
+<div class="sample"><div><h3>Rising Tension</h3><p>Sweep untuk menyiapkan momen reveal.</p></div><div class="controls"><button class="small play" data-kind="riser" data-act="play">▶ Dengar</button><button class="small" data-kind="riser" data-act="save">↓ WAV</button></div></div>
+<div class="sample"><div><h3>Cartoon Bonk</h3><p>Springy accent untuk komedi dan gaming.</p></div><div class="controls"><button class="small play" data-kind="bonk" data-act="play">▶ Dengar</button><button class="small" data-kind="bonk" data-act="save">↓ WAV</button></div></div>
+</div><p class="note">Suara demo ini dibuat secara prosedural di browser, terpisah dari master SFX berbayar. Saat ini belum ada checkout atau klaim produk premium yang belum melalui kurasi.</p></div></section>
+<section id="about"><div class="wrap"><div class="eyebrow">03 / Inside the lab</div><h2>Original by design.<br>Useful by purpose.</h2><p class="lead">Kami mengembangkan SFX melalui pemilihan konteks penggunaan, eksperimen sintesis, pemeriksaan kualitas teknis, dan kurasi kreatif.</p></div></section>
+<section class="end"><div class="wrap"><div class="eyebrow">Start with the sound</div><h2>Don't just watch it.<br>Make it felt.</h2><p>Mulai dari demo gratis. Koleksi SFX untuk kebutuhan editing sedang kami kembangkan.</p><a class="btn" href="#sounds">Coba suara original</a></div></section>
+</main><footer><div class="wrap"><b>LOKAL AUDIO LAB</b><span>Sound makes the scene. © <span id="year">2026</span></span><span>Built for the edit.</span></div></footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+const bars=document.getElementById("wave");for(let i=0;i<64;i++){const e=document.createElement("i");e.style.setProperty("--h",(0.12+0.88*Math.abs(Math.sin(i*.19)*Math.cos(i*.32))).toFixed(2));bars.appendChild(e)}
+function sample(kind){const sr=48000,d={impact:1,riser:2,bonk:.5}[kind],n=Math.round(sr*d),s=new Float32Array(n);let phase=0,random=42005;for(let i=0;i<n;i++){const t=i/sr,u=t/d;random^=random<<13;random^=random>>>17;random^=random<<5;const noise=(random>>>0)/2147483648-1;let v=0;if(kind==="impact"){phase+=2*Math.PI*(60+200*Math.exp(-18*t))/sr;v=Math.sin(phase)*Math.exp(-7*u)+noise*.3*Math.exp(-45*t)}else if(kind==="riser"){phase+=2*Math.PI*(100+1400*u*u)/sr;v=Math.sin(phase)*u*u}else{phase+=2*Math.PI*(150+650*Math.exp(-10*u))/sr;v=(Math.sin(phase)+.15*Math.sin(2*phase))*Math.exp(-5*u)}s[i]=v*Math.min(1,i/250,(n-1-i)/250)}let peak=0;for(const v of s)peak=Math.max(peak,Math.abs(v));for(let i=0;i<s.length;i++)s[i]*=.74/Math.max(peak,.00001);return{rate:sr,samples:s}}
+function asWav(x){let n=x.samples.length,b=new ArrayBuffer(44+n*2),v=new DataView(b);const str=(at,s)=>{for(let i=0;i<s.length;i++)v.setUint8(at+i,s.charCodeAt(i))};str(0,"RIFF");v.setUint32(4,36+n*2,true);str(8,"WAVE");str(12,"fmt ");v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,x.rate,true);v.setUint32(28,x.rate*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);str(36,"data");v.setUint32(40,n*2,true);for(let i=0;i<n;i++)v.setInt16(44+2*i,Math.round(x.samples[i]*32767),true);return new Blob([b],{type:"audio/wav"})}
+let ctx,src;document.getElementById("samples").addEventListener("click",async e=>{let b=e.target.closest("button[data-kind]");if(!b)return;const kind=b.dataset.kind,x=sample(kind);if(b.dataset.act==="save"){const u=URL.createObjectURL(asWav(x));const a=document.createElement("a");a.href=u;a.download="LokalAudioLab_demo_"+kind+".wav";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);return}ctx??=new(window.AudioContext||window.webkitAudioContext)();await ctx.resume();if(src)try{src.stop()}catch(_){ }const buf=ctx.createBuffer(1,x.samples.length,x.rate);buf.copyToChannel(x.samples,0);src=ctx.createBufferSource();src.buffer=buf;src.connect(ctx.destination);src.start();b.textContent="♫ Playing";src.onended=()=>b.textContent="▶ Dengar"});
+</script>
+</body></html>
