@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1116">
+  <meta name="description" content="Lokal Audio Lab. Original sound effects designed for editors, filmmakers, game developers, and commercial storytelling. Hear the difference and download original free audio demos.">
+  <meta property="og:title" content="Lokal Audio Lab — Sound makes the scene.">
+  <meta property="og:description" content="An interactive sound design studio. Hear what changes.">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark">
+  <title>Lokal Audio Lab — Sound makes the scene.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=2">
+  <script src="./app.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati navigasi</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Lokal Audio Lab — kembali ke awal">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="brand-type">LOKAL<span>AUDIO</span>LAB<span class="brand-period">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <a href="#experience">Experience</a>
+        <a href="#applications">Use cases</a>
+        <a href="#library">Sound library</a>
+        <a href="#lab">The lab</a>
+      </nav>
+      <a class="header-cta" href="#library"><span>Explore sounds</span><span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Buka navigasi">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi mobile" hidden>
+      <a href="#experience">Experience <span>01</span></a>
+      <a href="#applications">Use cases <span>02</span></a>
+      <a href="#library">Sound library <span>03</span></a>
+      <a href="#lab">The lab <span>04</span></a>
+      <a href="#contact">Get started <span>05</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-dark" id="top" aria-labelledby="heroTitle">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-shell">
+        <div class="hero-topline mono reveal">
+          <span><span class="signal-dot"></span> INDEPENDENT SOUND DESIGN STUDIO</span>
+          <span class="hero-index">EST. FOR THE EDIT / 001</span>
+        </div>
+        <div class="hero-copy">
+          <div class="eyebrow reveal">SOUND IS NOT AN AFTERTHOUGHT.</div>
+          <h1 id="heroTitle" class="hero-title reveal">HEAR WHAT<br><em>CHANGES<span class="accent">.</span></em></h1>
+          <p class="hero-description reveal">Satu detail suara bisa mengubah cara sebuah adegan terasa. Dengar, bandingkan, dan temukan SFX original yang dibuat untuk kebutuhan edit sesungguhnya.</p>
+          <div class="hero-actions reveal">
+            <button class="primary-action hero-listen" id="heroPlay" data-play="impact" aria-label="Putar demo cinematic impact">
+              <span class="button-play-symbol" aria-hidden="true">▶</span> <span id="heroPlayLabel">Play the sound</span>
+            </button>
+            <a href="#experience" class="text-action">Experience the difference <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Visualisasi suara yang bereaksi ketika demo diputar">
+          <div class="hero-art-border"></div>
+          <div class="art-meta mono"><span>FREQUENCY / ORIGINAL</span><span id="visualStatus">SIGNAL IDLE</span></div>
+          <canvas id="heroCanvas" aria-hidden="true"></canvas>
+          <div class="art-bottom mono"><span>48 KHZ · MONO</span><span>SOUND MAKES THE SCENE.</span></div>
+          <div class="art-crosshair art-crosshair-tl"></div><div class="art-crosshair art-crosshair-br"></div>
+        </div>
+        <div class="hero-bottom mono reveal">
+          <span>SCROLL TO LISTEN</span>
+          <span class="scroll-track" aria-hidden="true"><i></i></span>
+          <span>HEADPHONES RECOMMENDED ↙</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="signal-strip" aria-label="Kategori sound effects">
+      <div class="signal-strip-track" aria-hidden="true">SOUND DESIGN <b>✳</b> CINEMATIC <b>✳</b> GAME AUDIO <b>✳</b> COMMERCIAL <b>✳</b> COMEDY <b>✳</b> AUDIO DRAMA <b>✳</b> SOUND DESIGN <b>✳</b> CINEMATIC <b>✳</b> GAME AUDIO <b>✳</b> COMMERCIAL <b>✳</b> COMEDY <b>✳</b> AUDIO DRAMA <b>✳</b></div>
+    </div>
+
+    <section class="experience section-pad" id="experience" aria-labelledby="experienceTitle">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="eyebrow"><span class="section-number">01 /</span> THE EXPERIENCE</span>
+          <h2 class="display-title" id="experienceTitle">Same scene.<br><span class="outlined-title">Different feeling.</span></h2>
+          <p>Visualnya tetap. Yang berubah hanya sound effect-nya. Coba bandingkan sendiri, karena audio bukan sekadar ornamen.</p>
+        </div>
+        <div class="experience-layout">
+          <div class="scene-panel reveal">
+            <div class="scene-header mono"><span>SCENE 001 / ABSTRACT CUT</span><span class="scene-status" id="sceneStatus">READY TO PLAY</span></div>
+            <div class="scene-canvas" id="sceneCanvas" data-kind="impact" data-mode="after" aria-label="Animasi abstract cut untuk uji before and after sound effect">
+              <div class="scene-horizon"></div><div class="scene-grid"></div>
+              <span class="scene-orb" aria-hidden="true"></span>
+              <span class="scene-slash" aria-hidden="true"></span>
+              <span class="scene-flash" aria-hidden="true"></span>
+              <span class="scene-corner scene-corner-a" aria-hidden="true"></span>
+              <span class="scene-corner scene-corner-b" aria-hidden="true"></span>
+              <span class="scene-label mono">VISUAL CONSISTENT / AUDIO VARIABLE</span>
+              <span class="scene-counter mono" id="sceneCounter">00:00 / 00:03</span>
+            </div>
+            <div class="scene-footer">
+              <span class="mono" id="sceneAudioState">SOUND EFFECT: ON</span>
+              <button class="scene-replay" id="sceneReplay" aria-label="Mainkan adegan"><span aria-hidden="true">▶</span> <span id="sceneReplayLabel">Play scene</span></button>
+            </div>
+          </div>
+          <div class="experience-controls reveal">
+            <div class="controls-caption mono">A / B SOUND COMPARISON</div>
+            <h3>What's missing<br>when it's silent?</h3>
+            <p>Dengarkan scene yang sama dua kali. Pilih mode, lalu mainkan animasinya. Sound hanya aktif pada mode <strong>With SFX</strong>.</p>
+            <fieldset class="comparison-toggle" id="compareModes">
+              <legend class="sr-only">Mode suara</legend>
+              <button type="button" data-mode="before" aria-pressed="false">01 <span>Without SFX</span></button>
+              <button type="button" data-mode="after" aria-pressed="true">02 <span>With SFX</span></button>
+            </fieldset>
+            <label class="select-label mono" for="sceneKind">TEST ANOTHER SOUND</label>
+            <div class="select-wrap">
+              <select id="sceneKind">
+                <option value="impact">Cinematic impact</option>
+                <option value="bonk">Comedy bonk</option>
+                <option value="game">Game reward</option>
+                <option value="commercial">Product reveal</option>
+              </select>
+              <span aria-hidden="true">⌄</span>
+            </div>
+            <div class="experience-tip"><span class="tip-icon" aria-hidden="true">✳</span><p><strong>Editor tip:</strong> Timing dan jenis efek sering lebih penting daripada volumenya.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="applications section-pad" id="applications" aria-labelledby="applicationsTitle">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="eyebrow"><span class="section-number">02 /</span> BY PURPOSE</span>
+          <h2 class="display-title" id="applicationsTitle">Every scene<br>has its <span class="lime-highlight">own sound.</span></h2>
+          <p>Mulai dari kebutuhan cerita, bukan dari nama file. Pilih konteks untuk mendengar karakter SFX yang berbeda.</p>
+        </div>
+        <div class="application-layout">
+          <div class="category-list" role="group" aria-label="Pilih kategori sound">
+            <button class="category-row is-active" type="button" data-category="cinematic" aria-pressed="true"><span class="cat-id mono">01</span><span class="cat-name">Cinematic</span><span class="cat-arrow" aria-hidden="true">↗</span></button>
+            <button class="category-row" type="button" data-category="gaming" aria-pressed="false"><span class="cat-id mono">02</span><span class="cat-name">Game audio</span><span class="cat-arrow" aria-hidden="true">↗</span></button>
+            <button class="category-row" type="button" data-category="commercial" aria-pressed="false"><span class="cat-id mono">03</span><span class="cat-name">Commercial</span><span class="cat-arrow" aria-hidden="true">↗</span></button>
+            <button class="category-row" type="button" data-category="comedy" aria-pressed="false"><span class="cat-id mono">04</span><span class="cat-name">Comedy & short</span><span class="cat-arrow" aria-hidden="true">↗</span></button>
+            <button class="category-row" type="button" data-category="audio_drama" aria-pressed="false"><span class="cat-id mono">05</span><span class="cat-name">Audio drama</span><span class="cat-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="category-stage reveal" id="categoryStage">
+            <div class="category-stage-top mono"><span>SELECTED CONTEXT</span><span id="categoryIndex">01 / 05</span></div>
+            <div class="category-shape" aria-hidden="true"><canvas id="categoryCanvas"></canvas><span class="shape-ring"></span></div>
+            <div class="category-stage-content">
+              <span class="eyebrow" id="categoryEyebrow">FOR THE MOMENT</span>
+              <h3 id="categoryHeading">Make the moment hit.</h3>
+              <p id="categoryDescription">Impact yang terasa, transisi yang punya bobot, dan cerita yang lebih jelas melalui sound design.</p>
+              <button class="icon-label-action" id="categoryPlay" data-play="impact"><span class="circle-play" aria-hidden="true">▶</span><span id="categoryPlayLabel">Listen to cinematic</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="library section-pad" id="library" aria-labelledby="libraryTitle">
+      <div class="container">
+        <div class="library-title-row reveal">
+          <div><span class="eyebrow"><span class="section-number">03 /</span> SOUND LIBRARY</span><h2 class="display-title" id="libraryTitle">Made to be heard.</h2></div>
+          <p>Enam sound demos original. Preview langsung, dengarkan detailnya, lalu unduh file WAV untuk mencoba dalam edit.</p>
+        </div>
+        <div class="library-filters reveal" role="group" aria-label="Filter sound effects">
+          <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All sounds <span>06</span></button>
+          <button class="filter-btn" data-filter="cinematic" aria-pressed="false">Cinematic</button>
+          <button class="filter-btn" data-filter="gaming" aria-pressed="false">Gaming</button>
+          <button class="filter-btn" data-filter="commercial" aria-pressed="false">Commercial</button>
+          <button class="filter-btn" data-filter="comedy" aria-pressed="false">Comedy</button>
+          <button class="filter-btn" data-filter="audio_drama" aria-pressed="false">Audio drama</button>
+        </div>
+        <div class="sound-list" id="soundList">
+          <article class="sound-row reveal" data-sound="impact" data-category="cinematic"><span class="sound-index mono">01</span><button class="sound-play" data-play="impact" aria-label="Putar cinematic impact">▶</button><div class="sound-details"><h3>Cinematic Impact</h3><p>Hard cut · Defined attack · Low body</p></div><canvas class="sound-wave" data-wave="impact" aria-hidden="true"></canvas><span class="sound-duration mono">01:10</span><button class="sound-download" data-download="impact" aria-label="Unduh WAV cinematic impact">↓ <span>WAV</span></button></article>
+          <article class="sound-row reveal" data-sound="riser" data-category="cinematic"><span class="sound-index mono">02</span><button class="sound-play" data-play="riser" aria-label="Putar rising tension">▶</button><div class="sound-details"><h3>Rising Tension</h3><p>Build-up · Increasing energy · Reveal</p></div><canvas class="sound-wave" data-wave="riser" aria-hidden="true"></canvas><span class="sound-duration mono">02:40</span><button class="sound-download" data-download="riser" aria-label="Unduh WAV rising tension">↓ <span>WAV</span></button></article>
+          <article class="sound-row reveal" data-sound="game" data-category="gaming"><span class="sound-index mono">03</span><button class="sound-play" data-play="game" aria-label="Putar game reward">▶</button><div class="sound-details"><h3>Game Reward</h3><p>Interaction · Confirmation · Chime</p></div><canvas class="sound-wave" data-wave="game" aria-hidden="true"></canvas><span class="sound-duration mono">00:95</span><button class="sound-download" data-download="game" aria-label="Unduh WAV game reward">↓ <span>WAV</span></button></article>
+          <article class="sound-row reveal" data-sound="commercial" data-category="commercial"><span class="sound-index mono">04</span><button class="sound-play" data-play="commercial" aria-label="Putar product reveal">▶</button><div class="sound-details"><h3>Product Reveal</h3><p>Brand motion · Sweep · Airy accent</p></div><canvas class="sound-wave" data-wave="commercial" aria-hidden="true"></canvas><span class="sound-duration mono">01:80</span><button class="sound-download" data-download="commercial" aria-label="Unduh WAV product reveal">↓ <span>WAV</span></button></article>
+          <article class="sound-row reveal" data-sound="bonk" data-category="comedy"><span class="sound-index mono">05</span><button class="sound-play" data-play="bonk" aria-label="Putar comedy bonk">▶</button><div class="sound-details"><h3>Comedy Bonk</h3><p>Slapstick · Spring · Quick response</p></div><canvas class="sound-wave" data-wave="bonk" aria-hidden="true"></canvas><span class="sound-duration mono">00:60</span><button class="sound-download" data-download="bonk" aria-label="Unduh WAV comedy bonk">↓ <span>WAV</span></button></article>
+          <article class="sound-row reveal" data-sound="drone" data-category="audio_drama"><span class="sound-index mono">06</span><button class="sound-play" data-play="drone" aria-label="Putar mystery drone">▶</button><div class="sound-details"><h3>Mystery Drone</h3><p>Atmosphere · Suspense · Low texture</p></div><canvas class="sound-wave" data-wave="drone" aria-hidden="true"></canvas><span class="sound-duration mono">03:20</span><button class="sound-download" data-download="drone" aria-label="Unduh WAV mystery drone">↓ <span>WAV</span></button></article>
+        </div>
+        <div class="library-footer reveal">
+          <span class="mono">ORIGINAL SYNTHESIS / NO THIRD-PARTY AUDIO</span>
+          <p>Ini demo browser yang terpisah dari master sound library premium. Seluruh demo bisa dimainkan dan diunduh tanpa login.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifestoTitle">
+      <div class="manifesto-lines" aria-hidden="true"></div>
+      <div class="container manifesto-inner reveal">
+        <span class="eyebrow">THE PHILOSOPHY</span>
+        <h2 id="manifestoTitle">Sound isn't<br><span>background.</span><br>It's <em>storytelling.</em></h2>
+        <p>It changes how a moment lands.</p>
+      </div>
+    </section>
+
+    <section class="lab section-pad" id="lab" aria-labelledby="labTitle">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="eyebrow"><span class="section-number">04 /</span> INSIDE THE LAB</span>
+          <h2 class="display-title" id="labTitle">Built with intention.<br><span class="outlined-title">Not by accident.</span></h2>
+          <p>Setiap efek dimulai dari sebuah fungsi. Di balik suaranya ada proses, pemeriksaan teknis, dan ruang untuk revisi.</p>
+        </div>
+        <ol class="process-grid">
+          <li class="process-card reveal"><span class="process-index mono">01 / FIND THE NEED</span><span class="process-icon" aria-hidden="true">✳</span><h3>Research</h3><p>Memilih konteks penggunaan dan masalah editor yang ingin diselesaikan.</p></li>
+          <li class="process-card reveal"><span class="process-index mono">02 / SHAPE THE SOUND</span><span class="process-icon" aria-hidden="true">◈</span><h3>Design</h3><p>Membangun tekstur, attack, dan tail yang sesuai kebutuhan adegan.</p></li>
+          <li class="process-card reveal"><span class="process-index mono">03 / CHECK THE SIGNAL</span><span class="process-icon" aria-hidden="true">≋</span><h3>Evaluate</h3><p>Memeriksa format, dinamika, dan risiko efek yang terlalu mirip.</p></li>
+          <li class="process-card reveal"><span class="process-index mono">04 / LISTEN AGAIN</span><span class="process-icon" aria-hidden="true">↻</span><h3>Refine</h3><p>Kandidat tetap dikurasi sebelum dianggap siap menjadi produk final.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact-inner">
+        <span class="eyebrow reveal">YOUR NEXT SCENE STARTS HERE</span>
+        <h2 class="reveal" id="contactTitle">DON'T JUST<br>WATCH IT.<br><em>MAKE IT FELT.</em></h2>
+        <div class="contact-bottom reveal"><p>Mulai dari suara kecil. Rasakan perbedaannya. Jelajahi dan coba sampler SFX original secara gratis.</p><a class="contact-button" href="#library">Try the free sampler <span aria-hidden="true">↗</span></a></div>
+        <span class="contact-bottom-text mono">PREMIUM SOUND PACKS & CUSTOM WORK / IN DEVELOPMENT</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="brand-type">LOKAL<span>AUDIO</span>LAB<span class="brand-period">.</span></span></a><a class="back-top mono" href="#top">BACK TO TOP ↑</a></div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> LOKAL AUDIO LAB</span><span>ORIGINAL SFX. DESIGNED FOR THE EDIT.</span><span>SOCIAL CHANNELS / COMING SOON</span></div>
+  </footer>
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
