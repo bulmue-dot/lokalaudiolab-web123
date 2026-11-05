@@ -1,0 +1,62 @@
+name: Website UX and sound playback QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - redesign-preview.html
+      - styles.css
+      - app.js
+      - tests/**
+      - .github/workflows/site-qa.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  website-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: JavaScript syntax check
+        run: |
+          node --version
+          node --check app.js
+          node --check tests/browser-smoke.cjs
+      - name: Validate document structure and content
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          html=Path("redesign-preview.html").read_text()
+          js=Path("app.js").read_text()
+          css=Path("styles.css").read_text()
+          assert "app.js?v=2" in html and "styles.css?v=2" in html
+          for i in ("heroCanvas","sceneCanvas","sceneReplay","compareModes","sceneKind","categoryCanvas","categoryPlay","soundList","toast","mobileNav"):
+            assert 'id="'+i+'"' in html, i
+          assert html.count('data-sound=') == 6
+          assert html.count('data-category=') >= 11
+          assert "AudioContext" in js and "encodeWAV" in js and "downloadSound" in js
+          assert "prefers-reduced-motion" in css
+          class Parser(HTMLParser): pass
+          Parser().feed(html)
+          print("HTML structure and source contracts PASS")
+          PY
+      - name: Install small browser driver and run actual Chrome interaction test
+        run: |
+          command -v google-chrome || command -v chromium
+          npm install --no-save --ignore-scripts --no-audit --no-fund "playwright-core@1.55.0"
+          node tests/browser-smoke.cjs
+      - name: Upload test screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lokal-audio-lab-redesign-previews
+          path: test-artifacts/*.png
+          retention-days: 2
+          if-no-files-found: ignore
